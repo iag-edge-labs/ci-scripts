@@ -21,6 +21,9 @@ curl "https://api.ghostinspector.com/v1/suites/${GHOSTINSPECTOR_SUITE_ID}/execut
 
 # Conditional check if tests fail
 if [ $(grep -c '"passing":false' ghostinspector.json) -ne 0 ]; then
-    echo 'Ghost Inspector tests failed.'
+    echo 'Ghost Inspector tests failed.${GHOSTINSPECTOR_SUITE_ID}'
     exit 1;
+else
+    echo 'Ghost Inspector tests passed. Ran suite ${GHOSTINSPECTOR_SUITE_ID}';
+    exit 0;
 fi
