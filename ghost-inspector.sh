@@ -1,5 +1,5 @@
 #!/bin/sh
-# curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/packages/firefox.sh | bash -s
+# curl -sSL https://raw.githubusercontent.com/iag-edge-labs/ci-scripts/master/ghost-inspector.sh | bash -s
 
 # run ghost inspector e2e tests
 
